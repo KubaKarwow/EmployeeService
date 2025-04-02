@@ -30,5 +30,8 @@ var vacationPackage = new VacationPackage(1, "Self-care", 30, DateTime.Now.Year)
 var vacationService = new VacationService();
 // Usage of the function counting remaining days for employee in the current year.
 var countFreeDaysForEmployee = vacationService.CountFreeDaysForEmployee(employee, vacations, vacationPackage);
-Console.WriteLine("Remaining free days for employee:" +
-                  "" + countFreeDaysForEmployee);
+Console.WriteLine("Remaining free days for employee:" + countFreeDaysForEmployee);
+
+// Usage of the function returning whether employee can request vacation in the current year.
+var ifEmployeeCanRequestVacation = vacationService.IfEmployeeCanRequestVacation(employee,vacations,vacationPackage);
+Console.WriteLine("Can employee request vacation:" + ifEmployeeCanRequestVacation);
